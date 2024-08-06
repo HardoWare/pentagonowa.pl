@@ -1,0 +1,21 @@
+/* Created by Kacper Tabiszewski */
+
+@tailwind base;
+@tailwind utilities;
+@tailwind variants;
+
+* {
+	letter-spacing: -0.2px;
+	/*font-family: "Nunito", "Roboto", "-apple-system", "BlinkMacSystemFont", serif;*/
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+@media (prefers-color-scheme: light) {
+	html {
+		color-scheme: dark;
+	}
+}
