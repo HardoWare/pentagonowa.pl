@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "pentagonowa.pl",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,10 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix ."
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.4.0",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.18.3",

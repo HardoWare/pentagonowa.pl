@@ -73,7 +73,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-ui-pack",
     "@nuxtjs/i18n",
-    "@nuxt/eslint",
     "@nuxt/fonts"
   ]
 })

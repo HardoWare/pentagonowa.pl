@@ -1,33 +1,39 @@
 <script setup lang="ts">
 
+const { t, locale } = useI18n()
+
+const dropItems = [[
+  { label: `FREEROAM`, to: `/${locale.value}/fr`, avatar: { src: '/img/logo/logo-fp.png' }, target: '_self' },
+  { label: `ROLEPLAY`, to: `/${locale.value}/rp`, avatar: { src: '/img/logo/logo-rp.png' }, target: '_self' },
+  { label: `FR x RP`, to: `/${locale.value}/frxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
+]]
+
 </script>
 
 <template>
 <div class="w-full h-full pt-28">
-  <div class="h-full flex justify-center ">
-    <div class="relative w-[600px] h-full border-4 border-b-amber-50">
-      <div class="absolute top-5 right-0 ">
-        <NuxtImg src="/img/hipki/6.png" width="230px" format="webp" placeholder />
-      </div>
-      <div class="absolute top-3/4 left-14 -translate-x-1/2 -translate-y-1/2">
-        <NuxtImg src="/img/hipki/3.png" width="280px" format="webp" placeholder />
-      </div>
-      <div class="absolute bottom-1/2 right-0 translate-y-1/2">
-        <NuxtImg src="/img/logo/logo-rp.png" width="290px" format="webp" placeholder />
-      </div>
-      <div class="absolute bottom-0 left-0">
-        <NuxtImg src="/img/hipki/1.png" width="330px" format="webp" placeholder />
+  <div class="h-full grid grid-cols-2 lg:grid-cols-4 gap-2">
+    <div class="flex justify-center  col-span-2 sm:col-span-1 order-first">
+      <div class="self-center w-fit h-fit">
+        <UDropdown :items="dropItems" mode="hover" class="group" :popper="{ placement: 'bottom-start' }">
+          <UButton variant="ghost" size="xl" class="w-fit h-fit text-2xl">
+            <UIcon name="i-fa6-solid-angle-right" class="group-hover:rotate-90 transition transform duration-400" /> {{ $t('pages.index.pick-server') }}
+          </UButton>
+        </UDropdown>
       </div>
     </div>
-  </div>
-  <div class="">
-
+    <div class="flex justify-center col-span-2 order-none">
+      <NuxtImg src="/img/main3.png" format="webp" placeholder class="object-cover rounded-[13rem]" />
+    </div>
+    <div class="flex justify-center col-span-2 sm:col-span-1 -order-1 lg:order-last">
+      <div class="self-center w-fit h-fit">
+        <UButton icon="i-fa6-solid-angle-right" :label="$t('pages.index.pick-server')" variant="ghost" size="xl" class="w-fit h-fit" />
+      </div>
+    </div>
   </div>
 </div>
 </template>
 
 <style scoped>
-.img-center {
-  transform: translateX(-50%) translateY(50%);
-}
+
 </style>
