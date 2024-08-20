@@ -2,12 +2,12 @@
 const { setAsyncInterval, clearAsyncInterval } = useAsyncInterval()
 const { params } = useRoute()
 
-const dcLinks = {
+const dcLinks: { [key: string]: string } = {
 	fr: 'https://discord.gg/P5Q7XDBVaJ',
 	rp: 'https://discord.gg/wybawmtmVY',
 	frxrp: 'https://discord.gg/cXrJ8a278Y',
 }
-const connectLinks = {
+const connectLinks: { [key: string]: string } = {
 	fr: 'https://cfx.re/join/o73m6j',
 	rp: 'https://cfx.re/join/koel4a',
 	frxrp: 'https://cfx.re/join/jxgq8a',
@@ -61,13 +61,13 @@ onBeforeUnmount(() => {
 				<div class="w-full self-center flex flex-row justify-around">
 					<UButton icon="i-fa6-solid-plug"
 					         :label="$t('pages.index.connect')"
-					         :to="connectLinks[$route.params.server]"
+					         :to="connectLinks[Array.isArray($route.params.server) ? $route.params.server[0] : $route.params.server]"
 					         target="_blank"
 					         variant="soft" size="xl" class="w-fit h-fit"
 					/>
 					<UButton icon="i-ic-baseline-discord"
 					         label="Discord"
-					         :to="dcLinks[$route.params.server]"
+					         :to="dcLinks[Array.isArray($route.params.server) ? $route.params.server[0] : $route.params.server]"
 					         target="_blank"
 					         variant="soft" size="xl" class="w-fit h-fit"
 					/>
