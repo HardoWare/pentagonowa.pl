@@ -1,23 +1,18 @@
 <script setup lang="ts">
-// import colors from '#tailwind-config/theme/colors'
-// const appConfig = useAppConfig()
-// const colorMode = useColorMode()
-
-// const pentaColors = computed(() => appConfig.ui.colors.filter(value => ))
-// console.log(colors)
-// const primaryColors = computed(() => appConfig.ui.colors.filter(color => color !== 'primary').map(color => ({ value: color, text: color, hex: colors[color][colorMode.value === 'dark' ? 400 : 500] })))
-// console.log(primaryColors)
-
-// const style = computed(() => {
-//   return {
-//     backgroundColor: colors.primary[colorMode.value === 'dark' ? 400 : 500],
-//     color: colors.primary[colorMode.value === 'dark' ? 500 : 400]
-//   }
-// })
+const appConfig = useAppConfig()
+const colors: { [key: string]: string } = {
+	'/frxrp': 'penta-red',
+	'/fr': 'penta-green',
+	'/rp': 'penta-blue',
+}
+watch(() => useRoute().path, (newPath, oldPath) => {
+	const foundColorKey = Object.keys(colors).find(key => newPath.includes(key))
+	appConfig.ui.primary = foundColorKey ? colors[foundColorKey] : 'penta-white'
+}, { immediate: true, deep: true })
 </script>
 
 <template>
-  <div class="relative w-screen max-w-full h-screen max-h-full bg-gray-800 main-bg overflow-x-hidden">
+  <div class="relative w-screen max-w-full h-screen max-h-full bg-gray-800 main-bg overflow-x-hidden text-penta-white-100">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

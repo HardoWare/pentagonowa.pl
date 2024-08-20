@@ -8,13 +8,15 @@
   },
   "pages": {
     "index": {
+      "server-info": "Przyzwoity server FiveM",
       "pick-server": "Wybierz serwer",
       "currently-on-server": "Aktualnie na serwerze",
       "players-online": "Graczy online",
       "join-server": "Dołącz do serwera",
       "latest-news": "Najnowsze wiadomości",
       "read-more": "Czytaj więcej",
-      "api-error": "Błąd API"
+      "api-error": "Błąd API",
+      "connect": "Połącz"
     }
   }
 }

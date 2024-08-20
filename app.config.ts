@@ -1,12 +1,20 @@
 export default defineAppConfig({
   ui: {
-    primary: 'penta-red',
-    gray: 'neutral',
+    primary: 'penta-white',
+    gray: 'cool',
     // colors: [],
     strategy: 'merge',
+    button: {
+      variant: {
+        ghost: 'dark:text-{color}-200',
+        soft: 'dark:text-{color}-200',
+      },
+
+    },
     horizontalNavigation: {
+      active: 'dark:after:bg-primary-200',
       icon: {
-        active: 'dark:text-red-300 ',
+        active: 'dark:text-primary-200',
         base: 'text-black'
       }
     },
@@ -14,7 +22,4 @@ export default defineAppConfig({
       position: 'bottom-0',
     },
   },
-  // icon: {
-  //
-  // },
 })
