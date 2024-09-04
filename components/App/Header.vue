@@ -17,7 +17,7 @@ const links2 = <HorizontalNavigationLink[][] | VerticalNavigationLink[][]> [
     // { label: `${t('header.contact')}`, to: `/${locale.value}/contact`, icon: 'i-fa6-solid-briefcase', target: '_self' },
     { label: `FREEROAM`, to: `/${locale.value}/servers/fr`, avatar: { src: '/img/logo/logo-fp.png' }, target: '_self' },
     { label: `ROLEPLAY`,  to: `/${locale.value}/servers/rp`, avatar: { src: '/img/logo/logo-rp.png' }, target: '_self' },
-    { label: `FR x RP`, to: `/${locale.value}/servers/frxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
+    { label: `FP x RP`, to: `/${locale.value}/servers/fpxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
   ],
 ]
 watch(() => useRoute().path, () => {

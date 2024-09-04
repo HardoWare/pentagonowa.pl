@@ -13,9 +13,9 @@ const bgStyles: ComputedRef<string> = computed(() => {
 </script>
 
 <template>
-  <div class="w-full h-full" :style="bgStyles">
+  <div class="w-full max-h-full h-full overflow-hidden" :style="bgStyles">
     <AppHeader />
-    <main class="w-full min-h-[80vh] h-full max-h-full ">
+    <main class="w-full min-h-[60vh] h-full max-h-full overflow-auto">
       <slot />
     </main>
   </div>

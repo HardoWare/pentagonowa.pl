@@ -1,23 +1,25 @@
 <script setup lang="ts">
 const { setAsyncInterval, clearAsyncInterval } = useAsyncInterval()
 const { params } = useRoute()
-
 const dcLinks: { [key: string]: string } = {
 	fr: 'https://discord.gg/P5Q7XDBVaJ',
 	rp: 'https://discord.gg/wybawmtmVY',
-	frxrp: 'https://discord.gg/cXrJ8a278Y',
+	fpxrp: 'https://discord.gg/cXrJ8a278Y',
+}
+const photo: { [key: string]: string } = {
+	fr: 'fr-main.png',
+	rp: 'rp-main.png',
+	fpxrp: 'frp-main.png',
 }
 const connectLinks: { [key: string]: string } = {
-	fr: 'https://cfx.re/join/o73m6j',
-	rp: 'https://cfx.re/join/koel4a',
-	frxrp: 'https://cfx.re/join/jxgq8a',
+  fr: 'https://cfx.re/join/o73m6j',
+  rp: 'https://cfx.re/join/koel4a',
+  fpxrp: 'https://cfx.re/join/jxgq8a',
 }
-
 const currentPeopleOnServer: Ref<number | undefined> = ref(0)
 const loading = ref(true)
 const error = ref(false)
 const interval = ref(0)
-
 onMounted(() => {
 	interval.value = setAsyncInterval(async () => {
 		try {
@@ -27,6 +29,9 @@ onMounted(() => {
 		} finally {
 			loading.value = false
 		}
+    if (currentPeopleOnServer.value === undefined) {
+      error.value = true
+    }
 	}, 60000)
 })
 onBeforeUnmount(() => {
@@ -39,23 +44,28 @@ onBeforeUnmount(() => {
 		<div class="h-full grid grid-cols-2 lg:grid-cols-4 gap-2">
 			<div class="flex justify-center  col-span-2 sm:col-span-1 order-first">
 				<div class="self-center">
-					<div v-if="!error" class="">
+					<div>
 						<p class="text-2xl h-min self-center">
 							{{ $t('pages.index.currently-on-server') }}:
 						</p>
 						<UButton icon="i-fa6-solid-user-group"
-						         :label="currentPeopleOnServer?.toString()+' online'"
 						         :loading="loading"
 						         disabled
 						         :ui="{ base: 'disabled:opacity-100' }"
 						         variant="ghost" size="xl" class="w-fit h-fit text-2xl"
-						/>
+						>
+              <div v-if="!error">
+                {{ currentPeopleOnServer?.toString() }} online
+              </div>
+              <div v-else>
+                {{ $t('pages.index.api-error') }}
+              </div>
+            </UButton>
 					</div>
-					<UBadge v-else variant="soft" class="text-3xl"> {{ $t('pages.index.api-error') }} </UBadge>
 				</div>
 			</div>
 			<div class="flex justify-center col-span-2 order-none">
-				<NuxtImg src="/img/main3.png" format="webp" placeholder class="object-cover md:rounded-[13rem]" />
+				<NuxtImg :src="'/img/' + photo[Array.isArray($route.params.server) ? $route.params.server[0] : $route.params.server]" format="webp" placeholder class="object-cover lg:rounded-[13rem]" />
 			</div>
 			<div class="flex justify-center col-span-2 sm:col-span-1 -order-1 lg:order-last">
 				<div class="w-full self-center flex flex-row justify-around">

@@ -3,20 +3,20 @@ const { t, locale } = useI18n()
 const dropItems = [[
   { label: `FREEROAM`, to: `/${locale.value}/fr`, avatar: { src: '/img/logo/logo-fp.png' }, target: '_self' },
   { label: `ROLEPLAY`, to: `/${locale.value}/rp`, avatar: { src: '/img/logo/logo-rp.png' }, target: '_self' },
-  { label: `FR x RP`, to: `/${locale.value}/frxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
+  { label: `FP x RP`, to: `/${locale.value}/fpxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
 ]]
 </script>
 
 <template>
 <div class="w-full h-full pt-28">
   <div class="h-full grid grid-cols-2 lg:grid-cols-4 gap-2">
-    <div class="flex justify-center  col-span-2 sm:col-span-1 order-first">
+    <div class="flex justify-center col-span-2 sm:col-span-1 order-first">
       <div class="self-center w-fit h-fit">
-        <p class="text-xl">{{ $t('pages.index.server-info') }}</p>
+        <p class="text-3xl font-bold">{{ $t('pages.index.server-info') }}</p>
       </div>
     </div>
     <div class="flex justify-center col-span-2 order-none">
-      <NuxtImg src="/img/main3.png" format="webp" placeholder class="object-cover md:rounded-[13rem]" />
+      <NuxtImg src="/img/main.png" format="webp" placeholder class="object-cover md:rounded-[13rem]" />
     </div>
     <div class="flex justify-center col-span-2 sm:col-span-1 -order-1 lg:order-last">
 	    <div class="self-center w-fit h-fit">

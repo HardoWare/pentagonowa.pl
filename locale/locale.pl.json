@@ -8,7 +8,7 @@
   },
   "pages": {
     "index": {
-      "server-info": "Przyzwoity server FiveM",
+      "server-info": "Sieć serwerów FiveM",
       "pick-server": "Wybierz serwer",
       "currently-on-server": "Aktualnie na serwerze",
       "players-online": "Graczy online",
@@ -17,6 +17,23 @@
       "read-more": "Czytaj więcej",
       "api-error": "Błąd API",
       "connect": "Połącz"
+    },
+    "about": {
+      "serv-pros": "Zalety naszych serwerów:",
+      "pros": {
+        "1": "Stabilne i wydajne serwery",
+        "2": "Przyjazna społeczność",
+        "3": "Aktywna administracja",
+        "4": "Własne interiory",
+        "5": "Prywatne pedy",
+        "6": "Unikalne skrypty"
+      },
+      "about": "Kim jesteśmy?",
+      "about-text": "Jesteśmy grupą ludzi, którzy chcą stworzyć przyjazne miejsce dla graczy FiveM. Naszym celem jest zapewnienie najlepszych serwerów, które zapewnią Ci najlepsze wrażenia z gry.",
+      "our-team": "Nasza ekipa",
+      "team-text": "Składamy się zarówno z osób bez doświadczenia jak i tych z doświadczeniem komercyjnym, którzy pracują aby Twój pobyt na naszych serwerach był jak najlepszy.",
+      "join-team": "Dołącz do nas",
+      "join-text": "Cały czas polepszamy jakość rozgrywki, jeśli jesteś programistą i chcesz do nas dołączyć, lub masz pomysł jak polepszyć aspekt gry, skontaktuj się z nami, a my postaramy się odpowiedzieć na Twoje pytanie."
     }
   }
 }
