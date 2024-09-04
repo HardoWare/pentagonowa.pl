@@ -1,9 +1,39 @@
 {
   "header": {
-    "home": "Dom",
-    "about": "O nas",
-    "team": "Ekipa",
-    "servers": "Serwery",
-    "contact": "Kontakt"
+    "home": "Home",
+    "about": "About Us",
+    "team": "Team",
+    "servers": "Servers",
+    "contact": "Contact"
+  },
+  "pages": {
+    "index": {
+      "server-info": "FiveM Server Network",
+      "pick-server": "Pick a Server",
+      "currently-on-server": "Currently on Server",
+      "players-online": "Players Online",
+      "join-server": "Join Server",
+      "latest-news": "Latest News",
+      "read-more": "Read More",
+      "api-error": "API Error",
+      "connect": "Connect"
+    },
+    "about": {
+      "serv-pros": "Advantages of Our Servers:",
+      "pros": {
+        "1": "Stable and Efficient Servers",
+        "2": "Friendly Community",
+        "3": "Active Administration",
+        "4": "Custom Interiors",
+        "5": "Private Peds",
+        "6": "Unique Scripts"
+      },
+      "about": "Who Are We?",
+      "about-text": "We are a group of people who want to create a friendly place for FiveM players. Our goal is to provide the best servers that will give you the best gaming experience.",
+      "our-team": "Our Team",
+      "team-text": "We consist of both inexperienced individuals and those with commercial experience who work to ensure that your stay on our servers is as enjoyable as possible.",
+      "join-team": "Join Us",
+      "join-text": "We are constantly improving the quality of gameplay. If you are a developer and want to join us, or if you have an idea on how to improve the gaming experience, contact us and we will do our best to respond to your query."
+    }
   }
 }

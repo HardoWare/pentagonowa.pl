@@ -1,25 +1,22 @@
 <script setup lang="ts">
-import type { HorizontalNavigationLink, VerticalNavigationLink } from "#ui/types"
-import type { Ref } from "vue";
+import type { HorizontalNavigationLink, VerticalNavigationLink } from '#ui/types'
+import type { Ref } from 'vue'
 const { t, locale } = useI18n()
 const slideRef: Ref<boolean> = ref(false)
-const links1 = <HorizontalNavigationLink[][] | VerticalNavigationLink[][]> [
+const links1: ComputedRef<HorizontalNavigationLink[][] | VerticalNavigationLink[][]> = computed(() => {  return [
   [
     { label: `${t('header.home')}`, to: `/${locale.value}`, icon: 'i-fa6-solid-house', target: '_self'  },
     { label: `${t('header.about')}`, to: `/${locale.value}/about`, icon: 'fa6-solid-spaghetti-monster-flying', target: '_self' },
     { label: `${t('header.team')}`, to: `/${locale.value}/team`, icon: 'i-fa6-solid-users', target: '_self' },
   ],
-]
-const links2 = <HorizontalNavigationLink[][] | VerticalNavigationLink[][]> [
+]})
+const links2: ComputedRef<HorizontalNavigationLink[][] | VerticalNavigationLink[][]> = computed(() => {  return [
   [
-    // { label: `${t('header.servers')}`, to: `/${locale.value}/servers`, icon: 'i-fa6-solid-server', target: '_self' },
-    // { label: `Discord`, to: `/${locale.value}/discord`, icon: 'ic-round-discord', target: '_self' },
-    // { label: `${t('header.contact')}`, to: `/${locale.value}/contact`, icon: 'i-fa6-solid-briefcase', target: '_self' },
     { label: `FREEROAM`, to: `/${locale.value}/servers/fr`, avatar: { src: '/img/logo/logo-fp.png' }, target: '_self' },
     { label: `ROLEPLAY`,  to: `/${locale.value}/servers/rp`, avatar: { src: '/img/logo/logo-rp.png' }, target: '_self' },
     { label: `FP x RP`, to: `/${locale.value}/servers/fpxrp`, avatar: { src: '/img/logo/logo-frp.png' }, target: '_self' },
   ],
-]
+]})
 watch(() => useRoute().path, () => {
   slideRef.value = false
 })

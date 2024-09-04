@@ -2,14 +2,12 @@ export default defineAppConfig({
   ui: {
     primary: 'penta-white',
     gray: 'cool',
-    // colors: [],
     strategy: 'merge',
     button: {
       variant: {
         ghost: 'dark:text-{color}-200',
         soft: 'dark:text-{color}-200',
       },
-
     },
     horizontalNavigation: {
       active: 'dark:after:bg-primary-200',

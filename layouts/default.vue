@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { ComputedRef } from "vue"
+import type { ComputedRef } from 'vue'
+import LangSwitcher from "~/components/LangSwitcher.vue";
 const route = useRoute()
-const styles: {[key: string]: string} = {
+const styles: { [key: string]: string } = {
   fr: 'backdrop-filter: sepia(0.8) saturate(2.4) brightness(0.9) contrast(1.1) hue-rotate(100deg);',
   rp: 'backdrop-filter: sepia(0.9) saturate(3.3) brightness(0.9) contrast(1.1) hue-rotate(180deg);',
   frxrp: 'backdrop-filter: sepia(0.8) saturate(3.3) brightness(0.9) contrast(1.1) hue-rotate(325deg);',
@@ -19,8 +20,5 @@ const bgStyles: ComputedRef<string> = computed(() => {
       <slot />
     </main>
   </div>
+  <LangSwitcher />
 </template>
-
-<style scoped>
-
-</style>

@@ -12,7 +12,7 @@ const dropItems = [[
   <div class="h-full grid grid-cols-2 lg:grid-cols-4 gap-2">
     <div class="flex justify-center col-span-2 sm:col-span-1 order-first">
       <div class="self-center w-fit h-fit">
-        <p class="text-3xl font-bold">{{ $t('pages.index.server-info') }}</p>
+        <p class="text-3xl font-bold text-center">{{ $t('pages.index.server-info') }}</p>
       </div>
     </div>
     <div class="flex justify-center col-span-2 order-none">

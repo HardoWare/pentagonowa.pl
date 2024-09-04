@@ -14,7 +14,7 @@ export default <Partial<Config>> {
   plugins: [],
   theme: {
     fontFamily: {
-      // 'body': 'Roboto, sans-serif',
+      'body': 'Roboto, sans-serif',
     },
     extend: {
       colors: {

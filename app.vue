@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const appConfig = useAppConfig()
 const colors: { [key: string]: string } = {
-	'/frxrp': 'penta-red',
+	'/fpxrp': 'penta-red',
 	'/fr': 'penta-green',
 	'/rp': 'penta-blue',
 }

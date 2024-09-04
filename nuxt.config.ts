@@ -56,17 +56,15 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
     configPath: '~/tailwindcss.config',
-    editorSupport: true // todo DEV
+    editorSupport: false // todo DEV
 
   },
   runtimeConfig: {
   },
-
   /* DEV */
-  devtools: { enabled: true },
-  sourcemap: true,
+  devtools: { enabled: false },
+  sourcemap: false,
   /* DEV */
-
   modules: [
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
